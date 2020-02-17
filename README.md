@@ -39,7 +39,7 @@ app.get('/createpoststable',(req,res) => {
 
 });
 
-#Insert post 1
+# Insert post 1
 
 
 app.get('/addpost1', (req,res) => {
@@ -55,7 +55,7 @@ app.get('/addpost1', (req,res) => {
 });
 
 
-#Insert post 2
+# Insert post 2
 
 app.get('/addpost2', (req,res) => {
     let post = {title:'NBA', body:'Russell'};
@@ -69,7 +69,7 @@ app.get('/addpost2', (req,res) => {
 
 });
 
-#Select posts
+# Select posts
 
 app.get('/getposts', (req,res) => {
     let sql = 'SELECT * FROM `posts`';
@@ -80,7 +80,7 @@ app.get('/getposts', (req,res) => {
     });
 });
 
-#Select single post
+# Select single post
 
 app.get('/getposts/:id', (req,res) => {
     let sql = `SELECT * FROM posts WHERE id = ${req.params.id}`;
@@ -91,8 +91,8 @@ app.get('/getposts/:id', (req,res) => {
     });
 });
 
-//Update post
-//更改title
+# Update post
+# 更改title
 
 app.get('/updatposts/:id', (req,res) => {
     let newTitle = 'Hi KOBE';
@@ -105,7 +105,7 @@ app.get('/updatposts/:id', (req,res) => {
 });
 
 
-#Delete post
+# Delete post
 
 app.get('/deleteposts/:id', (req,res) => {
     let newTitle = 'Hi KOBE';
@@ -116,7 +116,7 @@ app.get('/deleteposts/:id', (req,res) => {
         res.send('Post delete...');
     });
 });
-
+# 連線網址3000
 app.listen('3000', () => {
     console.log('Server started on port 3000');
 
