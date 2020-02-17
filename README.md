@@ -1,4 +1,4 @@
-# node.js-MYSQL---REST
+# node.js-MYSQL---REST作法
 
 const express = require('express');
 const mysql = require('mysql');
