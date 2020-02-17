@@ -41,6 +41,7 @@ app.get('/createpoststable',(req,res) => {
 
 //Insert post 1
 
+
 app.get('/addpost1', (req,res) => {
     let post = {title:'Post One', body:'This is post number one'};
     let sql = 'INSERT INTO posts SET ?';
@@ -55,6 +56,7 @@ app.get('/addpost1', (req,res) => {
 
 
 //Insert post 2
+
 app.get('/addpost2', (req,res) => {
     let post = {title:'NBA', body:'Russell'};
     let sql = 'INSERT INTO posts SET ?';
@@ -79,6 +81,7 @@ app.get('/getposts', (req,res) => {
 });
 
 //Select single post
+
 app.get('/getposts/:id', (req,res) => {
     let sql = `SELECT * FROM posts WHERE id = ${req.params.id}`;
     let query = db.query(sql, (err ,result) => {
@@ -90,6 +93,7 @@ app.get('/getposts/:id', (req,res) => {
 
 //Update post
 //更改title
+
 app.get('/updatposts/:id', (req,res) => {
     let newTitle = 'Hi KOBE';
     let sql = `UPDATE posts SET body = '${newTitle}' WHERE id = ${req.params.id}`;
@@ -103,6 +107,7 @@ app.get('/updatposts/:id', (req,res) => {
 
 //Delete post
 //delete post 2
+
 app.get('/deleteposts/:id', (req,res) => {
     let newTitle = 'Hi KOBE';
     let sql = `DELETE FROM posts WHERE id = ${req.params.id}`;
